@@ -1,16 +1,16 @@
 package main
 
 import (
-	"time"
-	"log"
 	"encoding/csv"
 	"encoding/json"
 	"fmt"
 	"io"
+	"log"
+	"math/rand"
 	"net/http"
 	"os"
-	"math/rand"
-	"github.com/tarikjaber/main/hello"
+	"time"
+	"github.com/tarikjaber/jokester-cli/hello"
 )
 
 type Joke struct {
@@ -68,7 +68,6 @@ func readCsvFile(filePath string) [][]string {
 
 func main() {
 	rand.Seed(time.Now().UnixNano())
-	Yoda()
 	if rand.Intn(2) == 0 {
 		records := readCsvFile("jokes.csv")
 		randJokeIndex := rand.Intn(len(records))
