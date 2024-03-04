@@ -10,7 +10,6 @@ import (
 	"net/http"
 	"os"
 	"time"
-	"github.com/tarikjaber/jokester-cli/hello"
 )
 
 type Joke struct {
