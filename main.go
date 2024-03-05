@@ -13,7 +13,7 @@ import (
 	"embed"
 )
 
-//go:embed jokes.csv
+//go:embed *.csv
 var f embed.FS
 
 type Joke struct {
@@ -22,8 +22,6 @@ type Joke struct {
 
 func getJoke(c chan string) {
 	resp, err := http.Get("https://api.chucknorris.io/jokes/random")
-    fmt.Println("hello")
-   
 	
 	if err != nil {
 		fmt.Println("Error with http request")	
@@ -72,10 +70,10 @@ func readCsvFile(filePath string) [][]string {
 
 func main() {
 	rand.Seed(time.Now().UnixNano())
-	if rand.Intn(2) == 0 {
-		records := readCsvFile("jokes.csv")
+	if rand.Intn(1) == 0 {
+		records := readCsvFile("yomama.csv")
 		randJokeIndex := rand.Intn(len(records))
-		fmt.Println(records[randJokeIndex][1])
+		fmt.Println(records[randJokeIndex][0])
 	} else {
 		printMamaJoke()
 	}
