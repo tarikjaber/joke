@@ -1,6 +1,16 @@
 ## jokester-cli
 Cli that prints jokes.
 
+## Installation
+```bash
+go install github.com/tarikjaber/jokester-cli@latest
+```
+
+Now execute `jokester-cli`:
+```
+Yo mama is so fat that she's on both sides of the family!
+```
+
 ## Attributions
 Yo Mama Jokes: https://github.com/joshbuchea/yo-mama 
 
