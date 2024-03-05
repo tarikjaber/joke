@@ -46,7 +46,7 @@ func getJoke(c chan string) {
 	c <- joke.Value
 }
 
-func printMamaJoke() {
+func printNorrisJoke() {
 	c := make(chan string)
 
 	go getJoke(c)
@@ -70,11 +70,13 @@ func readCsvFile(filePath string) [][]string {
 
 func main() {
 	rand.Seed(time.Now().UnixNano())
-	if rand.Intn(1) == 0 {
+	if rand.Intn(2) == 0 {
 		records := readCsvFile("yomama.csv")
 		randJokeIndex := rand.Intn(len(records))
 		fmt.Println(records[randJokeIndex][0])
 	} else {
-		printMamaJoke()
+		records := readCsvFile("jokes.csv")
+		randJokeIndex := rand.Intn(len(records))
+		fmt.Println(records[randJokeIndex][1])
 	}
 }
