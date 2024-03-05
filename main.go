@@ -10,6 +10,7 @@ import (
 	"net/http"
 	"os"
 	"time"
+	"embed"
 )
 
 type Joke struct {
@@ -50,13 +51,13 @@ func printMamaJoke() {
 }
 
 func readCsvFile(filePath string) [][]string {
-	f, err := os.Open(filePath)
+	var f embed.FS
+	data, err := f.Open(filePath)
 	if err != nil {
 		log.Fatal("Unable to read input file " + filePath, err)
 	}
-	defer f.Close()
 	
-	csvReader := csv.NewReader(f)
+	csvReader := csv.NewReader(data)
 	records, err := csvReader.ReadAll()
 	if err != nil {
 		log.Fatal("Unable to parse file as CSV for ", filePath, err)
