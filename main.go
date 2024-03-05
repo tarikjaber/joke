@@ -22,6 +22,8 @@ type Joke struct {
 
 func getJoke(c chan string) {
 	resp, err := http.Get("https://api.chucknorris.io/jokes/random")
+    fmt.Println("hello")
+   
 	
 	if err != nil {
 		fmt.Println("Error with http request")	
