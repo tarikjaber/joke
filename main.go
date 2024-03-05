@@ -13,6 +13,9 @@ import (
 	"embed"
 )
 
+//go:embed jokes.csv
+var f embed.FS
+
 type Joke struct {
 	Value string `json:"value"`
 }
@@ -51,7 +54,6 @@ func printMamaJoke() {
 }
 
 func readCsvFile(filePath string) [][]string {
-	var f embed.FS
 	data, err := f.Open(filePath)
 	if err != nil {
 		log.Fatal("Unable to read input file " + filePath, err)
