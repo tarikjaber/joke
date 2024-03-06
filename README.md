@@ -2,6 +2,8 @@
 Cli that prints jokes.
 
 ## Installation
+Install go (if not yet installed): https://go.dev/doc/install
+
 ```bash
 go install github.com/tarikjaber/joke@latest
 ```

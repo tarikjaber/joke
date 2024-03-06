@@ -1,3 +1,3 @@
-module github.com/tarikjaber/jokester-cli
+module github.com/tarikjaber/joke
 
 go 1.18
