@@ -6,7 +6,7 @@ Cli that prints jokes.
 go install github.com/tarikjaber/joke@latest
 ```
 
-Now execute `jokester-cli`:
+Now execute `joke`:
 ```
 Yo mama is so fat that she's on both sides of the family!
 ```
