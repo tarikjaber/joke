@@ -3,7 +3,7 @@ Cli that prints jokes.
 
 ## Installation
 ```bash
-go install github.com/tarikjaber/jokester-cli@latest
+go install github.com/tarikjaber/joke@latest
 ```
 
 Now execute `jokester-cli`:
