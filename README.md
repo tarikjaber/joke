@@ -4,6 +4,7 @@ Cli that prints jokes.
 ## Installation
 Install go (if not yet installed): https://go.dev/doc/install
 
+Install the `joke` CLI:
 ```bash
 go install github.com/tarikjaber/joke@latest
 ```
