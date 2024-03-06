@@ -1,5 +1,5 @@
-## jokester-cli
-Cli that prints jokes.
+## joke
+CLI that prints jokes.
 
 ## Installation
 Install go (if not yet installed): https://go.dev/doc/install
